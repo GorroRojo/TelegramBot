@@ -1,0 +1,6 @@
+name = "telegrambot"
+main = "src/index.ts"
+compatibility_date = "2022-09-08"
+
+[triggers]
+crons = [ "1 * * * *" ]
