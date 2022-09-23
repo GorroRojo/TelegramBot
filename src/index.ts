@@ -11,7 +11,6 @@ async function handleRequest(request: Request): Promise<Response> {
     if ("message" in payload) {
       // Checking if the payload comes from Telegram
       const chatId = payload.message.chat.id;
-      const text = payload.message.text + " over part 3";
       
       //TEMP create job to go off every minute of septembre 23rd
       const taskId: string = payload.message.text
@@ -22,7 +21,7 @@ async function handleRequest(request: Request): Promise<Response> {
         url:url.toString(),
         schedule: scheduleFactory(undefined,[-1], [23], [-1], [9], [-1]),
         requestMethod: RequestMethod.GET,
-        title: "Task"
+        title: payload.message.text
       })
 
       let id: number = -1
