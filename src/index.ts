@@ -15,7 +15,7 @@ async function handleRequest(request: Request): Promise<Response> {
       //TEMP create job to go off every minute of septembre 23rd
       const taskId: string = payload.message.text
       let url: URL = new URL("https://telegrambot.gorro-rojo.workers.dev")
-      url.searchParams.append("taskID",taskId)
+      url.searchParams.append("taskId",taskId)
       console.log(url.toString())
       const job: DetailedJob = detailedJobFactory({
         url:url.toString(),
@@ -41,7 +41,8 @@ async function handleRequest(request: Request): Promise<Response> {
       
     }
   } else if (request.method === "GET") {
-    console.log("Gotten! With taskId: " + new URL(request.url).searchParams.get("taskId"))
+    const url = new URL(request.url)
+    console.log("Gotten! With taskId: " + url.searchParams.get("taskId"))
   }
   return new Response("OK"); // Doesn't really matter
 }
