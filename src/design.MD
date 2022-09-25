@@ -33,6 +33,7 @@
 - [ ] Tumblr queue
 - [ ] Sync calendario
 - [ ] Merciless Chance
+- [ ] Timer tiempo sin cadena 
 
 ## Programa
 
