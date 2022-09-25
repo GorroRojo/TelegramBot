@@ -25,35 +25,18 @@
 
 - v0.1
   - [ ] Tareas diarias
+  - [ ] Eventos
   - [ ] Sesiones Pendientes
   - [ ] Agenda concurrente
   - [ ] Reporte diario con botones faciles de castigo/recompensa
 
 - [ ] Tumblr queue
-- [ ] Eventos
 - [ ] Sync calendario
 - [ ] Merciless Chance
 
 ## Programa
 
-| type                             | desc                          |
-| -------------------------------- | ----------------------------- |
-| `let users: Array<TelegramUser>` | Usuaries registrades          |
-| `let relations: Array<Relation>` | Relaciones entre les usuaries |
-| `let dynamics: Array<Dynamic>`   | Dinámicas                     |
-
-- [x] Event|RoutineEvent|SingleEvent
-- [x] Task|RoutineTask|DeadlineTask
-- [x] DateSchedule
-- [x] Action
-- [x] ActionType
-- [x] SessionPreset
-- [x] Session
-- [x] Unit
-- [ ] User (parent)
-- [x] TelegramUser
-- [x] Dynamic
-- [x] Relation
+TODO Rewards? Treats?
 
 - programa
   - ActionType[] *¿y alguna forma de interpretarlas?*
