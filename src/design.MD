@@ -30,10 +30,12 @@
   - [ ] Agenda concurrente
   - [ ] Reporte diario con botones faciles de castigo/recompensa
 
-- [ ] Tumblr queue
 - [ ] Sync calendario
-- [ ] Merciless Chance
-- [ ] Timer tiempo sin cadena 
+- [ ] Modular??
+  - [ ] Tumblr queue
+  - [ ] Fetch gaumont movies
+  - [ ] Timer tiempo sin cadena
+  - [ ] Merciless Chance
 
 ## Programa
 
