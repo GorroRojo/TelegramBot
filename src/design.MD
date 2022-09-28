@@ -1,6 +1,6 @@
 - [Roadmap y diseño](#roadmap-y-diseño)
   - [Features](#features)
-  - [Programa](#programa)
+  - [Arquitectura del programa y de los KV](#arquitectura-del-programa-y-de-los-kv)
   - [DataTypes](#datatypes)
     - [Event](#event)
     - [RoutineEvent](#routineevent)
@@ -37,15 +37,15 @@
   - [ ] Timer tiempo sin cadena
   - [ ] Merciless Chance
 
-## Programa
+## Arquitectura del programa y de los KV
 
 TODO Rewards? Treats?
 
 - programa
   - ActionType[] *¿y alguna forma de interpretarlas?*
-  - TelegramUser[]
-  - Relation[]
-  - Dynamic[]
+  - TelegramUser[] `KV`
+  - Relation[] `KV`
+  - Dynamic[] `KV`
     - Array<Event|RoutineEvent|SingleEvent>
       - DateSchedule
       - Unit
@@ -56,7 +56,24 @@ TODO Rewards? Treats?
     - SessionPreset[]
     - Session[]
 
+PrefixKey
 
+- kv
+  - PrefixKey
+    - TelegramUserPrefix
+    - RelationPrefix
+    - DynamicPrefix
+  - PrefixKey + ":" + DynamicPrefix
+    - EventPrefix
+    - TaskPrefix
+    - SessionPresetPrefix
+    - SessionPrefix
+  - PrefixKey + ":" + DynamicPrefix + ":" + TaskPrefix
+    - ActionPrefix
+
+Bajo PrefixKey están todos los prefijos. después uniendo esos prefijos después de PrefixKey con un ":", podemos de cada uno ver si tienen sub-prefijos y así hasta que no haya más.
+
+Después la verdadera información está con en esos prefijos, unidos con ":" con los sub-prefijos si hace falta, y con un ":"+ID al final.
 
 ## DataTypes
 
