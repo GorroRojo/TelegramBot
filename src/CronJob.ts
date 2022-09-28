@@ -1,5 +1,6 @@
 declare const CRONJOB_KEY: String;
 
+// ENUMS
 export enum JobStatus {
   NOT_EXECUTED,
   OK,
@@ -27,6 +28,7 @@ export enum RequestMethod {
   CONNECT,
   PATCH,
 }
+// INTERFACES
 export interface JobSchedule {
   timezone: string;
   hours: number[];
@@ -67,7 +69,7 @@ export interface DetailedJob extends Job {
     body: string;
   };
 }
-
+// FUNCTIONS
 /**
  * Sends a request to cron-job to create detailedJob
  * @param detailedJob
