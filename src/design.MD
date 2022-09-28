@@ -262,5 +262,3 @@ Le usuarie D es quien generalmente "controla" a S. Si la relación no tiene dife
 | `const dTitle: number`  | Título de D (opt)            |
 | `const sTitle: string`  | Título de S (opt)            |
 | `const isW: boolean`    | Si es una relación de tipo W |
-
-
