@@ -1,6 +1,7 @@
 - [Roadmap y diseño](#roadmap-y-diseño)
   - [Features](#features)
-  - [Arquitectura del programa y de los KV](#arquitectura-del-programa-y-de-los-kv)
+  - [Lógica de programa](#lógica-de-programa)
+  - [Arquitectura del datos y de los KV](#arquitectura-del-datos-y-de-los-kv)
   - [DataTypes](#datatypes)
     - [Event](#event)
     - [RoutineEvent](#routineevent)
@@ -37,7 +38,14 @@
   - [ ] Timer tiempo sin cadena
   - [ ] Merciless Chance
 
-## Arquitectura del programa y de los KV
+## Lógica de programa
+
+1. recibe señal de telegram
+2. es desde un grupo?
+   - SI: buscar qué dinámica es
+   - NO: buscar qué usuarie es
+
+## Arquitectura del datos y de los KV
 
 TODO Rewards? Treats?
 
