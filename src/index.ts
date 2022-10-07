@@ -30,5 +30,4 @@ async function sendMessage(chatId: number, text: string): Promise<any> {
 
   return await fetch(url.href).then((resp) => resp.json());
 }
-export { };
-
+export {};
