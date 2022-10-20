@@ -49,7 +49,7 @@ interface KVIX {
     value: string | ReadableStream | ArrayBuffer,
     options: { expirationTtl?: number; expiration?: number; metadata?: any }
   ): Promise<any>;
-  get(key: string, options: any): Promise<any>;
+  get(key: string, options?: any): Promise<any>;
   delete(key: string): Promise<any>;
   list(options?: {
     prefix?: string;
@@ -115,3 +115,7 @@ async function getDynamics(): Promise<any> {
     }
   });
 }
+export async function getLastUpdate() {
+  return await NAMESPACE.get("base:last_update")
+}
+
