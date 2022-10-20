@@ -47,7 +47,7 @@ interface KVIX {
   put(
     key: string,
     value: string | ReadableStream | ArrayBuffer,
-    options: { expirationTtl?: number; expiration?: number; metadata?: any }
+    options?: { expirationTtl?: number; expiration?: number; metadata?: any }
   ): Promise<any>;
   get(key: string, options?: any): Promise<any>;
   delete(key: string): Promise<any>;
@@ -118,4 +118,9 @@ async function getDynamics(): Promise<any> {
 export async function getLastUpdate() {
   return await NAMESPACE.get("base:last_update")
 }
+export async function setLastUpdate(update_id: number) {
+  await NAMESPACE.put("base:last_update", update_id)
+  ;
+}
+
 
